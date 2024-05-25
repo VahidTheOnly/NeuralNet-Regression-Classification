@@ -1,34 +1,71 @@
-# Neural Network Models for Regression and Classification
+## Project Documentation: Neural Network Models with NumPy and TensorFlow
 
-This repository contains Python code implementing neural network models for regression and binary classification and also multiclass classification tasks. The neural networks are built from scratch using Python and TensorFlow for computing derivatives.
+### Overview
 
-## Files Included
+This project comprises three Jupyter notebooks, each showcasing different neural network architectures for various tasks:
 
-1. `linear_regression_single_perceptron.ipynb`: This Jupyter notebook contains the implementation of a single perceptron neural network model for linear regression. It demonstrates two variations of the model: one with a single input node and the other with two input nodes.
+1. **Single Perceptron for Regression**
+2. **Two-Layer Neural Network for Binary Classification**
+3. **Multi-Layer Neural Network for Multi-Class Classification**
 
-2. `NeuralNet_with_Two_Layers.ipynb`: This Jupyter notebook implements a neural network model with two layers for binary classification. The network architecture consists of an input layer with two nodes, a hidden layer with two or more perceptrons, and an output layer with one perceptron.
+### File 1: `linear_regression_single_perceptron.ipynb`
 
-3. `multi_layer_nn.ipynb`: This Jupyter notebook implements a neural network model with an arbitrary number of layers multiclass classification.
+#### Description
+This notebook illustrates a neural network model utilizing a single perceptron for linear regression tasks. Two variants are presented: one with a single input feature and another with two input features.
 
-## Dataset
+#### Contents
+1. **Single Input Perceptron**
+    - **Data Generation**: Synthetic data is created using `make_regression` from sklearn.
+    - **Model Implementation**:
+        - `initialize_parameters`: Initializes weights and biases.
+        - `forward_propagation`: Computes the predicted output.
+        - `compute_cost`: Calculates the mean squared error cost.
+        - `gradient_descent`: Updates parameters using gradient descent.
+        - `nn_model`: Trains the model using the above functions.
+    - **Visualization**: Plots the regression line and data points.
+    
+2. **Two Input Perceptron**
+    - **Data Preparation**: Reads and preprocesses the house prices dataset.
+    - **Model Implementation**: Reuses functions from the single input model.
+    - **Visualization and Evaluation**: Plots the regression results and calculates RMSE and R² score.
 
-### Regression Task:
-For the regression task, synthetic data is generated using `make_regression` from sklearn. Additionally, real estate data from a CSV file named 'house_prices_train.csv' is utilized.
+### File 2: `NeuralNet_with_Two_Layers.ipynb`
 
-### Binary Classification Task:
-For the binary classification task, synthetic data is created using `make_blobs` from sklearn. and also two simple dataset 'Arcs.csv' and 'flower.csv' are utilized.
+#### Description
+This notebook implements a neural network with one hidden layer for binary classification tasks. The hidden layer can have an arbitrary number of neurons.
 
-### MultiClass Classification Task:
-For the multiclass classification task, `Digits dataset` loaded from sklearn. similar to mnist dataset it contains images of numbers between Zero to Ten.
+#### Contents
+1. **Data Generation**: Synthetic data is created using `make_blobs` from sklearn.
+2. **Model Implementation**:
+    - `initialize_parameters`: Initializes weights and biases for both layers.
+    - `forward_propagation`: Computes the predicted output.
+    - `compute_cost`: Calculates the binary cross-entropy loss.
+    - `gradient_descent`: Updates parameters using gradient descent.
+    - `nn_model`: Trains the model using the above functions.
+    - `predict`: Makes predictions using the trained model.
+    - `plot_decision_boundary`: Visualizes the decision boundary of the trained model.
+3. **Visualization**: Plots decision boundaries for different datasets.
+4. **Evaluation**: Calculates and displays the RMSE and R² score.
 
-## Functionality
+### File 3: `multi_layer_nn.ipynb`
 
-- `initialize_parameters`: Initializes the weights and biases of the neural network layers.
-- `forward_propagation`: Performs forward propagation through the network layers.
-- `compute_cost`: Calculates the cost (loss) function.
-- `gradiant_descent`: Updates the parameters using gradient descent optimization.
-- `nn_model`: Implements the training process of the neural network models.
-- `predict`: Predicts output labels for input data.
-- `plot_decision_boundary`: Visualizes the decision boundary for the classification model.
+#### Description
+This notebook implements a multi-layer neural network for multi-class classification tasks using the MNIST digits dataset.
 
-
+#### Contents
+1. **Data Preparation**:
+    - Loads and preprocesses the MNIST digits dataset.
+    - Scales features using `MinMaxScaler`.
+    - Splits the data into training and testing sets.
+2. **Model Implementation**:
+    - `initialize_parameters`: Initializes weights and biases for each layer.
+    - `forward_propagation`: Computes the predicted output using softmax activation for the final layer.
+    - `compute_cost`: Calculates the categorical cross-entropy loss.
+    - `gradient_descent`: Updates parameters using gradient descent.
+    - `learning_rate_decay`: Implements learning rate decay over epochs.
+    - `nn_model`: Trains the model using the above functions.
+    - `predict`: Makes predictions using the trained model.
+3. **Evaluation**:
+    - Evaluates the model using classification report and accuracy score.
+    - Displays confusion matrix.
+    - Visualizes misclassified examples.
