@@ -8,9 +8,8 @@ This project comprises three Jupyter notebooks, each showcasing different neural
 2. **Two-Layer Neural Network for Binary Classification**
 3. **Multi-Layer Neural Network for Multi-Class Classification**
 
-### File 1: `linear_regression_single_perceptron.ipynb`
+### `linear_regression_single_perceptron.ipynb`
 
-#### Description
 This notebook illustrates a neural network model utilizing a single perceptron for linear regression tasks. Two variants are presented: one with a single input feature and another with two input features.
 
 #### Contents
@@ -29,9 +28,8 @@ This notebook illustrates a neural network model utilizing a single perceptron f
     - **Model Implementation**: Reuses functions from the single input model.
     - **Visualization and Evaluation**: Plots the regression results and calculates RMSE and R² score.
 
-### File 2: `NeuralNet_with_Two_Layers.ipynb`
+### `NeuralNet_with_Two_Layers.ipynb`
 
-#### Description
 This notebook implements a neural network with one hidden layer for binary classification tasks. The hidden layer can have an arbitrary number of neurons.
 
 #### Contents
@@ -47,9 +45,8 @@ This notebook implements a neural network with one hidden layer for binary class
 3. **Visualization**: Plots decision boundaries for different datasets.
 4. **Evaluation**: Calculates and displays the RMSE and R² score.
 
-### File 3: `multi_layer_nn.ipynb`
+### `multi_layer_nn.ipynb`
 
-#### Description
 This notebook implements a multi-layer neural network for multi-class classification tasks using the MNIST digits dataset.
 
 #### Contents
