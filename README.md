@@ -1,6 +1,5 @@
 ## Neural Network Models with NumPy and TensorFlow
 
-### Overview
 
 This project comprises three Jupyter notebooks, each showcasing different neural network architectures for various tasks:
 
@@ -27,7 +26,6 @@ This notebook illustrates a neural network model utilizing a single perceptron f
     - **Data Preparation**: Reads and preprocesses the house prices dataset.
     - **Model Implementation**: Reuses functions from the single input model.
     - **Visualization and Evaluation**: Plots the regression results and calculates RMSE and R² score.
-    - **Evaluation**: Calculates and displays the RMSE and R² score.
 
 ### `NeuralNet_with_Two_Layers.ipynb`
 
@@ -64,6 +62,6 @@ This notebook implements a multi-layer neural network for multi-class classifica
     - `nn_model`: Trains the model using the above functions.
     - `predict`: Makes predictions using the trained model.
 3. **Evaluation**:
-    - Evaluates the model using classification report and accuracy score first with learning rate decay and then with mini-batch.
+    - Evaluates the model using classification report and accuracy score.
     - Displays confusion matrix.
     - Visualizes misclassified examples.
