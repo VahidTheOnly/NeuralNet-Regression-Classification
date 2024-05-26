@@ -1,4 +1,4 @@
-## Project Documentation: Neural Network Models with NumPy and TensorFlow
+## Neural Network Models with NumPy and TensorFlow
 
 ### Overview
 
@@ -27,6 +27,7 @@ This notebook illustrates a neural network model utilizing a single perceptron f
     - **Data Preparation**: Reads and preprocesses the house prices dataset.
     - **Model Implementation**: Reuses functions from the single input model.
     - **Visualization and Evaluation**: Plots the regression results and calculates RMSE and R² score.
+    - **Evaluation**: Calculates and displays the RMSE and R² score.
 
 ### `NeuralNet_with_Two_Layers.ipynb`
 
@@ -43,7 +44,6 @@ This notebook implements a neural network with one hidden layer for binary class
     - `predict`: Makes predictions using the trained model.
     - `plot_decision_boundary`: Visualizes the decision boundary of the trained model.
 3. **Visualization**: Plots decision boundaries for different datasets.
-4. **Evaluation**: Calculates and displays the RMSE and R² score.
 
 ### `multi_layer_nn.ipynb`
 
@@ -51,7 +51,7 @@ This notebook implements a multi-layer neural network for multi-class classifica
 
 #### Contents
 1. **Data Preparation**:
-    - Loads and preprocesses the MNIST digits dataset.
+    - Loads and preprocesses the digits dataset from scikit-learn.
     - Scales features using `MinMaxScaler`.
     - Splits the data into training and testing sets.
 2. **Model Implementation**:
@@ -60,9 +60,10 @@ This notebook implements a multi-layer neural network for multi-class classifica
     - `compute_cost`: Calculates the categorical cross-entropy loss.
     - `gradient_descent`: Updates parameters using gradient descent.
     - `learning_rate_decay`: Implements learning rate decay over epochs.
+    - `mini_batch`: Creates mini-batches from data (X, y).
     - `nn_model`: Trains the model using the above functions.
     - `predict`: Makes predictions using the trained model.
 3. **Evaluation**:
-    - Evaluates the model using classification report and accuracy score.
+    - Evaluates the model using classification report and accuracy score first with learning rate decay and then with mini-batch.
     - Displays confusion matrix.
     - Visualizes misclassified examples.
